@@ -1,0 +1,10 @@
+﻿@model Macaw.DynamicLoading.Domain.Models.PersonModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Deleted @Model.Name</h2>
+
+@Html.ActionLink("Return", "Index")

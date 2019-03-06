@@ -1,0 +1,31 @@
+﻿@model System.Collections.Generic.IEnumerable<Macaw.DynamicLoading.Domain.Models.PersonModel>
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>All persons</h2>
+
+<table>
+    <tr>
+        <td>#</td>
+        <td>Name</td>
+        <td>Action</td>
+    </tr>
+
+    @{
+        foreach (var person in Model)
+        {
+            <tr>
+                <td>@person.Name</td>
+                <td>
+                    @Html.ActionLink("View", "View", new {person.Id}) -
+                    @Html.ActionLink("Update", "View", new {person.Id}) -
+                    @Html.ActionLink("Delete", "Delete", new {person.Id})
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<p>@Html.ActionLink("Create person", "Create")</p>

@@ -1,0 +1,16 @@
+﻿@model Macaw.DynamicLoading.Domain.Models.PersonModel
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>Delete @Model.Name</h2>
+
+<p>
+    Are you sure you want to delete @Model.Name?
+</p>
+<p>
+    @Html.ActionLink("Yes", "DeleteDeleted", new {Id = Model.Id}) - 
+    @Html.ActionLink("Cancel", "Index")
+</p>
+

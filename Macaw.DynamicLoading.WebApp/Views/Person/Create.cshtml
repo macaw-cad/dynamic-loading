@@ -1,0 +1,23 @@
+﻿@model Macaw.DynamicLoading.Domain.Models.CreatePersonModel
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>Create person</h2>
+
+@using (Html.BeginForm("Create", "Person", FormMethod.Post))
+
+{
+    <p>
+        @Html.LabelFor(m => m.Name)<br />
+        @Html.EditorFor(m => m.Name)
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.Age)<br />
+        @Html.EditorFor(m => m.Age)
+    </p>
+
+    <input type="submit" value="Upload" class="save" />
+}

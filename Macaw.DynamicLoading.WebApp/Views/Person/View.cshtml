@@ -1,0 +1,14 @@
+﻿@model Macaw.DynamicLoading.Domain.Models.PersonModel
+
+@{
+    Layout = "_Layout";
+}
+
+<h2>@Model.Name</h2>
+
+<p>Id: @Model.Id</p>
+<p>Age: @Model.Age</p>
+
+<p>
+    @Html.ActionLink("Return", "Index")
+</p>
